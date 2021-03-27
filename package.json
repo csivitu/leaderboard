@@ -1,0 +1,40 @@
+{
+  "name": "leaderboard",
+  "version": "1.0.0",
+  "description": "A library to determine and maintain leaderboard ranking on the basis of user-defined sorting parameters during real-time competitions.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint \"src/**/*.{ts,js,jsx}\"",
+    "build": "tsc",
+    "start": "ts-node src/leaderboard.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csivitu/leaderboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csivitu/leaderboard/issues"
+  },
+  "homepage": "https://github.com/csivitu/leaderboard#readme",
+  "dependencies": {
+    "bull": "^3.20.0"
+  },
+  "devDependencies": {
+    "@types/bull": "^3.14.4",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "ts-node": "^9.0.0",
+    "tsc": "^1.20150623.0",
+    "typescript": "^4.1.2"
+  }
+}

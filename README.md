@@ -4,23 +4,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo">
+  <a href="https://github.com/csivitu/leaderboard">
     <img src="https://csivit.com/images/favicon.png" alt="Logo" width="80">
   </a>
 
-  <h3 align="center">YOUR_TITLE</h3>
+  <h3 align="center">leaderboard</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    A library to determine and maintain leaderboard ranking on the basis of user-defined sorting parameters during real-time competitions. 
     <br />
-    <a href="https://github.com/csivitu/repo"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/csivitu/leaderboard"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/csivitu/repo">View Demo</a>
+    <a href="https://github.com/csivitu/leaderboard">View Demo</a>
     ·
-    <a href="https://github.com/csivitu/repo/issues">Report Bug</a>
+    <a href="https://github.com/csivitu/leaderboard/issues">Report Bug</a>
     ·
-    <a href="https://github.com/csivitu/repo/issues">Request Feature</a>
+    <a href="https://github.com/csivitu/leaderboard/issues">Request Feature</a>
   </p>
 </p>
 
@@ -45,20 +45,20 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+**leaderboard** is a Node.js library built for the purpose of dynamically computing and maintaining leaderboard ranking on the basis of user-defined sorting parameters, that can be used for real-time competitive events.
+<br />
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
+**leaderboard** allows you to define the hierarchy of the parameters, along with the order (ascending/descending) of each parameter, against which you want to sort the leaderboard and pass these parameter values, as well as other information to be stored in the leaderboard, to it.
+<br />
 
+Every new submission data is passed into a function which treats this information as a job and adds it to a queue so that it can be processed sequentially. 
 
 ### Built With
 
-* []()
-* []()
-* []()
-
-
+* [Typescript](https://www.typescriptlang.org/)
+* [Node](https://nodejs.org/en/)
+* [Bull](https://optimalbits.github.io/bull/)
+* [Redis](https://redis.io/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -67,38 +67,20 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
+- [npm](https://www.npmjs.com/)
+- [redis](https://redis.io/)
 
 ### Installation
  
-1. Clone the repo
-```sh
-git clone https://github.com/github_username/repo.git
-```
-2. Install NPM packages
-```sh
-npm install
-```
-
+You can install **leaderboard** using `npm`. You also need to be running a `redis` instance of your own.
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/csivitu/leaderboard/issues) for a list of proposed features (and known issues).
 
 
 
