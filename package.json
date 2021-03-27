@@ -1,9 +1,10 @@
 {
   "name": "leaderboard",
   "version": "1.0.0",
-  "description": "[![csivit][csivitu-shield]][csivitu-url] [![Issues][issues-shield]][issues-url]",
+  "description": "A library to determine and maintain leaderboard ranking on the basis of user-defined sorting parameters during real-time competitions.",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint \"src/**/*.{ts,js,jsx}\"",
     "build": "tsc",
     "start": "ts-node src/leaderboard.ts",
     "test": "echo \"Error: no test specified\" && exit 1"

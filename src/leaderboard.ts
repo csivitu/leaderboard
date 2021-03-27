@@ -11,7 +11,6 @@ interface Interface1 {
 
 }
 
-// eslint-disable-next-line no-unused-vars
 class Leaderboard {
   leaderboard: any[] = [];
 
@@ -38,38 +37,42 @@ class Leaderboard {
     this.Queue.add(data);
   }
 
-  task(job: any): void {
-    if (this.leaderboard.findIndex((o) => o.name === job.name) === -1) {
-      this.leaderboard.push({ job });
+  task(data: any): void {
+    const index = this.leaderboard.findIndex((o) => o.name === data.name);
+    if (index > -1) {
+      this.leaderboard.splice(index, 1);
     }
+    this.leaderboard.push(data);
     this.sorter();
   }
 
-  // eslint-disable-next-line max-len
-  comparefunc = (a: any, b: any, name: string = this.sorting.parameters[this.i].name, order: string = this.sorting.parameters[this.i].order): number => {
+  compareFunc = (a: any, b: any, name: string = this.sorting.parameters[this.i].name,
+    order: string = this.sorting.parameters[this.i].order): number => {
     if (order === 'ascending') {
       if (a[name] !== b[name] || this.i === this.sorting.parameters.length - 1) {
         return a[name] - b[name];
       }
       this.i += 1;
-      return this.comparefunc(a, b);
+      return this.compareFunc(a, b);
     }
     if (order === 'descending') {
       if (a[name] !== b[name] || this.i === this.sorting.parameters.length - 1) {
         return b[name] - a[name];
       }
       this.i += 1;
-      return this.comparefunc(a, b);
+      return this.compareFunc(a, b);
     }
     return 0;
   }
 
   sorter(): void {
     this.i = 0;
-    this.leaderboard.sort((a: number, b: number): any => this.comparefunc(a, b));
+    this.leaderboard.sort(this.compareFunc);
   }
 
   getLeaderboard(): any {
     return this.leaderboard;
   }
 }
+
+module.exports = Leaderboard;

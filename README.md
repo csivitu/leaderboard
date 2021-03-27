@@ -60,7 +60,22 @@ Every new submission data is passed into a function which treats this informatio
 * [Bull](https://optimalbits.github.io/bull/)
 * [Redis](https://redis.io/)
 
+<!-- GETTING STARTED -->
+## Getting Started
 
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+- [npm](https://www.npmjs.com/)
+- [redis](https://redis.io/)
+
+### Installation
+ 
+You can install **leaderboard** using `npm`. You also need to be running a `redis` instance of your own.
+
+
+<!-- USAGE EXAMPLES -->
 
 <!-- ROADMAP -->
 ## Roadmap
